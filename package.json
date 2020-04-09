@@ -1,0 +1,34 @@
+{
+  "name": "manger.vesubie",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "firebase": "^7.12.0",
+    "html-loader": "^1.0.0",
+    "postcss": "^7.0.27",
+    "tailwindcss": "^1.2.0",
+    "vue": "^2.6.11",
+    "vue-multiselect": "^2.1.6",
+    "vue-router": "^3.1.6",
+    "vuefire": "^2.2.2",
+    "vuex": "^3.1.3"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^2.1.0",
+    "@vue/cli-plugin-babel": "~4.2.0",
+    "@vue/cli-plugin-eslint": "~4.2.0",
+    "@vue/cli-plugin-router": "~4.2.0",
+    "@vue/cli-service": "~4.2.0",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.1.2",
+    "pretty-checkbox-vue": "^1.1.9",
+    "vue-template-compiler": "^2.6.11"
+  }
+}

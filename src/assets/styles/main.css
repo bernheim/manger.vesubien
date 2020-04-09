@@ -1,0 +1,131 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+* {
+    box-sizing: border-box;
+}
+
+svg {
+    fill: currentColor;
+}
+
+.home {
+    background-color: #fbf7ee;
+    min-height: 100vh;
+}
+
+.card {
+    @apply max-w-sm rounded overflow-hidden shadow-lg m-auto;
+    width: 15em;
+}
+
+.card-container {
+    margin: 1em auto 0 auto;
+}
+
+
+.icon {
+    @apply inline-block px-2;
+}
+
+.productTag {
+    @apply inline-block bg-gray-200 rounded-full px-3 py-1 font-semibold text-gray-700 mr-2 mb-2;
+}
+
+.header-card {
+    @apply header-font;
+    height: 15em;
+    width: 15em;
+    padding: 6em 2em;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-width: 4px;
+    border-top-style: solid;
+    border-top-color: theme('colors.english.full');
+}
+
+@media (min-width: 1024px) {
+    .header-card {
+        @apply header-font;
+        height: 22em;
+        width: 22em;
+        padding: 8em 5em;
+    }
+    .card-container {
+        margin-left: initial;
+        margin-top: initial;
+    }
+    .card-container:not(:last-child) {
+        @apply mr-8 mb-4;
+    }
+    .card {
+        margin: initial;
+        margin-bottom: 2em;
+    }
+}
+
+
+.header-card > h2 {
+    @apply text-2xl;
+    border: 1px solid grey;
+    background: rgba(250,250,255,0.7);
+    padding: .5em;
+}
+
+h1, h2, h3, h4, h5 {
+    @apply header-font;
+}
+
+.header-font {
+    font-family: 'Libre Baskerville', serif;
+}
+
+.hero {
+    background: linear-gradient(rgba(255,255,255,0.8)), url("~@/assets/images/photo-restanque.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+p a {
+  border-bottom: 2px theme('colors.english.full') solid;  
+}
+
+.btn {
+    background-color: theme('colors.rifle');
+    padding: 1em;
+    color: white;
+    display: inline-block;
+    border: 2px solid theme('colors.rifle')
+}
+
+.btn:hover {
+
+}
+.btn-secondary:hover {
+    color: theme('colors.rifle');
+}
+
+.btn-secondary {
+    background-color: rgba(0,0,0,0);
+    color: theme('colors.rifle');
+    border: 2px theme('colors.rifle') solid;
+    padding: 1em;
+    display: inline-block;
+}
+
+.btn-tertiary {
+    padding: 1em;
+    color: rgba(100,100,100,0.5);
+}
+
+.warning {
+    color: theme('colors.crimson');
+}
+
+.warning:hover {
+    background-color: theme('colors.crimson');
+    color: white;
+}
