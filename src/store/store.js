@@ -5,7 +5,9 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    authenticated: ""
+    authenticated: "",
+    uid: "",
+    admin: ""
   },
   
   getters: {
@@ -13,18 +15,25 @@ export default new Vuex.Store({
   },
   
   mutations: {
-    logIn(state) {
+    logIn(state, user) {
       state.authenticated = true
+      state.uid = user.uid
+      if (user.uid == 'GApDBkdWbCbFbCKbH7tWUpirzwd2') {
+      state.admin = true
+      console.log(state.admin)
+      }
     },
     logOut(state) {
       state.authenticated = false
+      state.uid = ""
+      state.admin = false
     }
 
 },
   
   actions: {
-    logIn(context) {
-      context.commit('logIn')
+    logIn(context, user) {
+      context.commit('logIn', user)
     },
     logOut(context) {
       context.commit('logOut')

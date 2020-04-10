@@ -9,7 +9,10 @@ module.exports = {
           'full': '#19535F',
         },
         'crimson': '#DB3A34',
-        'rifle': '#3E463E',
+        'rifle': {
+          '500': '#3E463E',
+          '400': '#616761',
+        }
       }
     },
     fontSize: {

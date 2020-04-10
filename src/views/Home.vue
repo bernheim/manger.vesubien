@@ -37,7 +37,6 @@
           </div>
         <displayProducers type="Miel"></displayProducers>
       </div>
-      <div><router-link to="/add-producer">Admin</router-link></div>
     </div>
   </div>
 </template>

@@ -2,15 +2,18 @@
   <div id="app">
     <navigation />
     <router-view/>
+    <lower />
   </div>
 </template>
 
 <script>
 import navigation from '@/components/navigation'
+import lower from '@/components/lower'
 
 export default {
   components: {
-    navigation
+    navigation,
+    lower,
   }
 }
 </script>

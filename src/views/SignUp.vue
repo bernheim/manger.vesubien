@@ -4,7 +4,7 @@
         <form>
             <input type="text" v-model="email" placeholder="Email"><br>
             <input type="password" v-model="password" placeholder="Password"><br>
-            <button class="btn" @click="SignUp">Sign up</button>
+            <button class="btn" @click.prevent="SignUp">Sign up</button>
         </form>
     </div>
 </template>

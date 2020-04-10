@@ -93,32 +93,32 @@ p a {
   border-bottom: 2px theme('colors.english.full') solid;  
 }
 
-.btn {
-    background-color: theme('colors.rifle');
+.btn, .btn-secondary, .btn-tertiary {
+    display: inline-block;
     padding: 1em;
+    border-radius: 4px;
+}
+
+.btn {
+    background-color: theme('colors.rifle.500');
     color: white;
     display: inline-block;
-    border: 2px solid theme('colors.rifle')
 }
 
-.btn:hover {
-
-}
-.btn-secondary:hover {
-    color: theme('colors.rifle');
+.btn:hover, .btn-secondary:hover {
+    color: white;
+    background-color: theme('colors.rifle.400');
+    border-color: theme('colors.rifle.400');    
 }
 
 .btn-secondary {
     background-color: rgba(0,0,0,0);
-    color: theme('colors.rifle');
-    border: 2px theme('colors.rifle') solid;
-    padding: 1em;
-    display: inline-block;
+    color: theme('colors.rifle.500');
+    border: 2px theme('colors.rifle.500') solid;
 }
 
 .btn-tertiary {
-    padding: 1em;
-    color: rgba(100,100,100,0.5);
+    color: theme('colors.rifle.500');
 }
 
 .warning {

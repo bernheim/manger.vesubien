@@ -49,7 +49,8 @@ firebase.auth().onAuthStateChanged(() => {
       created() {
         firebase.auth().onAuthStateChanged((user) => {
             if (user) {
-              this.$store.dispatch('logIn')
+              this.$store.dispatch('logIn', user)
+              console.log(user.uid)
             }
         });
     },

@@ -19,7 +19,7 @@
                     #{{ product }}
                 </div>
             </div>
-            <div v-if="authenticated==true">
+            <div v-if="user && user==myProducer.owner || admin=='true'">
                 <editProducer :producer="myProducer" />
             </div>
         </div>
@@ -45,8 +45,11 @@ export default {
         editProducer
     },
     computed: {
-        authenticated() {
-            return this.$store.state.authenticated
+        user() {
+            return this.$store.state.uid
+        },
+        admin() {
+            return this.$store.state.admin
         },
         backgroundImage() {
             return "background-image: url(" + this.myProducer.img + ")"
@@ -62,6 +65,10 @@ export default {
             producersCollection.doc(myProducer.id).delete();
             this.$router.push({name:'Home'})
         }
+    },
+    mounted() {
+        console.log("state", this.$store.state.uid)
+        console.log(this.myProducer.owner)
     }
 }
 //name: this.newProducer,
@@ -92,7 +99,7 @@ export default {
     
     .info-box > div {
         display: inline-block;
-        @apply p-2 bg-rifle text-white text-xl;
+        @apply p-2 bg-rifle-500 text-white text-xl;
     }
 
     

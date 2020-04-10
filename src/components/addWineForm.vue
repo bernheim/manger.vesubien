@@ -28,6 +28,9 @@ export default {
     components: {
         Multiselect
     },
+    mounted() {
+
+    },
     data() {
         return {
             newProducer: "",
@@ -40,12 +43,15 @@ export default {
             deliverTrue: false,
             newProducerPhone: "",
             newProducerEmail: "",
-            newProducerDoc: ""
+            newProducerDoc: "",
+
+            createdBy: "",
         }
     },
     methods: {
         addProducer: function() {
             this.newProducerDoc = this.newProducer.replace(/ /g, '-').toLowerCase()
+            this.createdBy = firebase.auth().currentUser.uid
 
             if (this.newProducer && this.newProducerTxt && this.newProducerVillage && this.newProducerProducts) {
                 producersCollection.doc(this.newProducerDoc).set({
@@ -57,7 +63,8 @@ export default {
                     deliver: this.deliverTrue,
                     tel: this.newProducerPhone,
                     email: this.newProducerEmail,
-                    createdAt: new Date()
+                    createdAt: new Date(),
+                    owner: this.createdBy
                 })
                 .catch(function(error) {
                     alert("Error adding document: ", error);
