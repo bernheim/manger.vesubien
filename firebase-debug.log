@@ -1,0 +1,33 @@
+[debug] [2020-04-10T13:35:28.297Z] ----------------------------------------------------------------------
+[debug] [2020-04-10T13:35:28.300Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Grebs\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2020-04-10T13:35:28.301Z] CLI Version:   8.0.1
+[debug] [2020-04-10T13:35:28.301Z] Platform:      win32
+[debug] [2020-04-10T13:35:28.301Z] Node Version:  v12.16.1
+[debug] [2020-04-10T13:35:28.305Z] Time:          Fri Apr 10 2020 15:35:28 GMT+0200 (Central European Summer Time)
+[debug] [2020-04-10T13:35:28.305Z] ----------------------------------------------------------------------
+[debug] [2020-04-10T13:35:28.306Z] 
+[debug] [2020-04-10T13:35:28.319Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-10T13:35:28.320Z] > authorizing via signed-in user
+[debug] [2020-04-10T13:35:28.320Z] [iam] checking project firefly-stage-4231a for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-04-10T13:35:28.324Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/firefly-stage-4231a:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-04-10T13:35:29.200Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 10 Apr 2020 13:35:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=659","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-10T13:35:29.201Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/firefly-stage-4231a  
+ 
+[debug] [2020-04-10T13:35:29.486Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 10 Apr 2020 13:35:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'firefly-stage-4231a'...
+[info] 
+[info] i  deploying hosting
+[debug] [2020-04-10T13:35:29.506Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/firefly-stage-4231a/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-04-10T13:35:30.927Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 10 Apr 2020 13:35:25 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[firefly-stage-4231a]: beginning deploy...
+[info] i  hosting[firefly-stage-4231a]: found 17 files in dist
+[debug] [2020-04-10T13:35:37.128Z] [hosting] hash cache [ZGlzdA] stored for 17 files
+[debug] [2020-04-10T13:35:37.131Z] [hosting][hash queue][FINAL] {"max":6144,"min":63,"avg":508.5882352941176,"active":0,"complete":17,"success":17,"errored":0,"retried":0,"total":17,"elapsed":6163}
+[debug] [2020-04-10T13:35:37.131Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/firefly-stage-4231a/versions/ca7a9589b1402405:populateFiles  
+ <request body omitted>
+[debug] [2020-04-10T13:35:38.286Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 10 Apr 2020 13:35:32 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"quic=\":443\"; ma=2592000; v=\"46,43\",h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-04-10T13:35:38.290Z] [hosting][populate queue][FINAL] {"max":1166,"min":1166,"avg":1166,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1169}
+[debug] [2020-04-10T13:35:38.290Z] [hosting] uploads queued: 1

@@ -13,7 +13,8 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**",
-      "functions"
+      "functions",
+      ".env.dev"
     ],
     "rewrites": [
       {
